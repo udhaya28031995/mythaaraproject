@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+body{
+
+font-family:Comic Sans MS;
+color:#d9d9d9;
+font-weight:700;
+font-size:20px;
+background-color: #00004c;
+}
+
+.headercustom{
+background-color: #ccf5ff;
+margin: 0px 5px 3px 7px;
+border: 3px solid #ff66ff;
+color:#003366;
+}
+</style>
+</head>
+<body>
+<div class="headercustom">
+<center><h1>Spring Batch</h1></center>
+</div>
+<hr/>
+<p>
+
+spring batch-complex job-large volumes of data-not a scheduling framework-retry template--current flow -ve- concept of concurrent batch- two types- optimistic locking - pemmissitic locking -OL when fetching row fetches timestamp - PL lock column in table which will contain flag values-Parallel Processing acheived through partioning - we canc onfigure skip login sometimes some exception may occur which can be acceptable - <skippable-execution-class> with skip-limit as paramter for tha chunk - configure retry limit for deadlock retry-limit in chunk - step execution listener - item reader listener - chunk listener - conditional step flow- scaling & parallel processing 
+
+</p>
+
+<p>
+
+
+multi threaded step - task executor - throttle limit (t) - no of max threads from thread pool 
+parallel step - to execute step 1 & step2 with step 3 - job--step--flow--stepid-
+
+</p>
+
+<p> when fetching row from DB with row number-- we can do it using optimistic locking </p>
+<p> to continue with exceptions when data throws exception, we can use skippable execution class </p>
+<p> example program for multithreading</p>
+<a href="https://examples.javacodegeeks.com/enterprise-java/spring/batch/spring-batch-multithreading-example/">Link</a>
+<br/>
+<hr/>
+<center><p><b><u> partioning example in spring batch</u></b></p></center>
+<center><a href="https://examples.javacodegeeks.com/core-java/spring-batch-partitioning-example/">example program</a>
+
+
+</body>
+</html>
