@@ -1,0 +1,20 @@
+$0 - rep name of the script
+$* - rep all the aruguments as string
+$@ - rep same as dollar $*. but differ when enclose in "
+S# - rep total number of aguments. 
+$$ - rep PID
+S? - rep last return code
+echo $SHELL - shebang 
+#!/bin/bash -- // to prevent spoofing
+while do done
+shift -- iterate paramter by paramter
+source scriptname
+for in do done
+while[];
+do
+done
+function funame()
+{
+}
+funame
+eval value
