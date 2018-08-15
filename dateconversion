@@ -1,0 +1,55 @@
+package com.test;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class MyMain {
+
+	
+	public static void main(String[] args) {
+		
+		String startDate="01-02-2013";
+		SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy");
+		java.util.Date date=null;
+		try {
+			date = sdf1.parse(startDate);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		java.sql.Date sqlStartDate = new java.sql.Date(date.getTime());  
+		System.out.println(sqlStartDate);
+		System.out.println("******************");
+		
+		String start_dt = "2011-02-01";
+		DateFormat formatter = new SimpleDateFormat("yyyy-MM-DD"); 
+		Date date1=null;
+		try {
+			date1 = (Date)formatter.parse(start_dt);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		SimpleDateFormat newFormat = new SimpleDateFormat("MM-dd-yyyy");
+		String finalString = newFormat.format(date1);
+		System.out.println(finalString);
+		System.out.println("************************************");
+
+String dateStringInOriginalFormat = "280395";
+
+SimpleDateFormat originalFormatter = new SimpleDateFormat ("ddMMyy");
+SimpleDateFormat newFormatter = new SimpleDateFormat ("dd-MMM-yy");
+
+// parsing date string using original format
+ ParsePosition pos = new ParsePosition(0);
+ Date dateFromString = originalFormatter.parse(dateStringInOriginalFormat, pos);
+
+// Now you have a date object and you can convert it to the new format
+String dateStringInNewFormat = newFormatter.format(dateFromString);
+System.out.println(dateStringInNewFormat);
+		
+	}
+}
