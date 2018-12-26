@@ -64,22 +64,6 @@ parallel step - to execute step 1 & step2 with step 3 - job--step--flow--stepid-
   <a href="https://victorjabur.com/2014/11/10/spring-batch-partitioner-case-study-with-sourcecode-best-practices/">another one</a>
   </body>
 </html>
-User Stories to be created for EPAY defects
-
-#1
-Story Name:
-Create a new script for EPAY to discard invalid records before Step1 SB
-
-Story Description: 
-A new script is to be added before invoking step1 DB, to check for null values and length validation before proceeding to change the payment status from '6' to '50'. The discarded records must be written onto a separate file. 
-
-Acceptance Criteria:
-No invalid records should be passed into payment file. 
-Seamless payment file to be trasmitted, 
-Also, check for zero payment records for a particular day and ensure file should be created.
-
-Story points: 8
-
 ------------------------------------------------------------------
 #2
 Story Name:
